@@ -42,5 +42,13 @@
     .place-btn{
         width: 100%;
     }
+    .col {
+        float: none;
+        margin-top: 10px;
+        
+    }
+    .submit-btn {
+        width: 100%;
+    }
     
 }

@@ -36,11 +36,17 @@
 <!-- begin search -->
                 <div class="search-btn">
                     <i class="search-icon ti-search"></i>
+                    
                 </div>
+                <div id="mobile-menu" class="btn-menu-mobile">
+                    <i class="ti-menu"></i>
+                </div>
+
 <!-- begin search -->
 
         </div>
         <div id="slider">
+            <img src="https://img.lovepik.com/photo/50116/1593.jpg_wh860.jpg" alt="">
             <div class="textcontent">
                 <div class="texttieude">
                     NEW YORK
@@ -212,6 +218,7 @@
         </div>
     </div>
     <script>
+        // Khai báo
         const buyBtns = document.querySelectorAll('.js-buy-tickers')
         const modal = document.querySelector('.js-modal')
         const modalClose = document.querySelector('.js-modal-close')
@@ -237,6 +244,23 @@
             event.stopPropagation()
         })
 
+        // Ham cho phím menu trên mobile
+
+        var header =document.getElementById('heder');
+        var mobileMenu = document.getElementById('mobile-menu')
+        var heightMenu = header.clientHeight;
+        // đóng mở menu
+        mobileMenu.onclick = function () {
+            var isClose =header.clientHeight === heightMenu;
+            if (isClose){
+                header.style.height = 'auto';
+
+            } else {
+                header.style.height = null;
+                 
+            }
+        }
+        
     </script>
 </body>
 </html>
